@@ -1,0 +1,32 @@
+﻿@model DemoJuntaViernes.Models.ViewModels.AlumnoViewModel
+
+<div class="container">
+    <form asp-action="Create" asp-controller="Alumnos" method="post">
+        <div class="row justify-content-center">
+            <h2 class="text-center fs-5 mt-5 mb-3">Agregar Nuevo Alumno</h2>
+            <div class="col-lg-4 mb-3">
+                <label class="form-label">Nombre</label>
+                <input class="form-control" type="text" placeholder="Ingrese Nombre" asp-for="Nombre" />
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-4 mb-3">
+                <label class="form-label">Apellido</label>
+                <input class="form-control" type="text" placeholder="Ingrese Apellido" asp-for="Apellido" />
+            </div>
+
+            <div class="w-100"></div>
+            <div class="col-lg-4 mb-3">
+                <label class="form-label">Edad</label>
+                <input class="form-control" type="number" placeholder="Ingrese Edad" asp-for="Edad" />
+            </div>
+
+            <div class="w-100"></div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-end gap-3">
+                    <a asp-action="Index" asp-controller="Alumnos" class="btn btn-outline-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
